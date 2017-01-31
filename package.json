@@ -17,8 +17,8 @@
     "@angular/compiler": "2.2.1",
     "@angular/compiler-cli": "2.2.1",
     "@angular/core": "2.2.1",
-    "@angular/http": "2.2.1",
     "@angular/forms": "2.2.1",
+    "@angular/http": "2.2.1",
     "@angular/platform-browser": "2.2.1",
     "@angular/platform-browser-dynamic": "2.2.1",
     "@angular/platform-server": "2.2.1",
@@ -31,8 +31,8 @@
     "ionicons": "3.0.0",
     "ng2-cordova-oauth": "0.0.6",
     "rxjs": "5.0.0-beta.12",
-    "zone.js": "0.6.26",
-    "sw-toolbox": "3.4.0"
+    "sw-toolbox": "3.4.0",
+    "zone.js": "0.6.26"
   },
   "devDependencies": {
     "@ionic/app-scripts": "1.0.0",
@@ -44,7 +44,8 @@
     "cordova-plugin-whitelist",
     "cordova-plugin-splashscreen",
     "cordova-plugin-statusbar",
-    "ionic-plugin-keyboard"
+    "ionic-plugin-keyboard",
+    "cordova-plugin-inappbrowser"
   ],
   "cordovaPlatforms": [
     "ios",
