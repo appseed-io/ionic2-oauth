@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { IOathProvider } from '../oauth.provider.interface';
+import { OAuthProfile } from '../models/oauth-profile.model';
 import { CordovaOauth } from 'ng2-cordova-oauth/oauth';
 import { Google } from 'ng2-cordova-oauth/provider/google';
 import { Config } from '../../../config';
@@ -26,5 +27,23 @@ export class GoogleOauthProvider implements IOathProvider {
 
 	login(): Promise<string> {
 		return this.cordovaOauth.login(this.google).then((x: ILoginResponse) => x.access_token);
+	}
+
+	getProfile(accessToken: string): Promise<OAuthProfile> {
+		let query = `access_token=${accessToken}`;
+		let url = `${this.config.google.apiUrl}userinfo?${query}`;
+
+		return this.http.get(url)
+			.map(x => x.json())
+			.map(x => {
+				let name = x.name.split(' ');
+				return {
+					firstName: name[0],
+					lastName: name[1],
+					email: x.email,
+					provider: 'google'
+				};
+			})
+			.toPromise();
 	}
 }

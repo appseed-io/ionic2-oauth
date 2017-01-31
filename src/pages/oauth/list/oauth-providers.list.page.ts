@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
 import { OAuthService } from '../oauth.service';
+import { OAuthProfilePage } from '../profile/oauth-profile.page';
 
 @Component({
 	templateUrl: 'oauth-providers.list.html',
@@ -7,15 +9,17 @@ import { OAuthService } from '../oauth.service';
 })
 export class OAuthProvidersListPage {
 	private oauthService: OAuthService;
+	private nav: NavController;
 
-	constructor(oauthService: OAuthService) {
+	constructor(oauthService: OAuthService, nav: NavController) {
 		this.oauthService = oauthService;
+		this.nav = nav;
 	}
 
 	public login(source: string) {
 		this.oauthService.login(source)
 			.then(
-				() => console.log('Logged in successfully'),
+				() => this.nav.setRoot(OAuthProfilePage),
 				error => alert(error)
 			);
 	}

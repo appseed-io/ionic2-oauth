@@ -3,6 +3,7 @@ import { FacebookOauthProvider } from './facebook/facebook-oauth.provider';
 import { IOathProvider } from './oauth.provider.interface';
 import { GoogleOauthProvider } from './google/google-oauth.provider';
 import { OAuthToken } from './models/oauth-token.model';
+import { OAuthProfile } from './models/oauth-profile.model';
 
 @Injectable()
 export class OAuthService {
@@ -26,6 +27,19 @@ export class OAuthService {
 			this.setOAuthToken(oauthToken);
 			return oauthToken;
 		});
+	}
+
+	getProfile(): Promise<OAuthProfile> {
+		if (!this.isAuthorized()) {
+			return Promise.reject<OAuthProfile>('You are not authorized');
+		}
+
+		let oauthService = this.getOAuthService();
+		return oauthService.getProfile(this.getOAuthToken().accessToken);
+	}
+
+	isAuthorized(): boolean {
+		return !!this.getOAuthToken();
 	}
 
 	getOAuthService(source?: string): IOathProvider {

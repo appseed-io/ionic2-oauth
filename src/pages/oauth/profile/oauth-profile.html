@@ -1,0 +1,33 @@
+<ion-header>
+	<ion-navbar>
+		 <button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Profile</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-list *ngIf="!!profile">
+		<ion-item>
+			<h2>OAuth provider</h2>
+			<p>{{profile.provider}}</p>
+		</ion-item>
+		<ion-item>
+			<h2>First name</h2>
+			<p>{{profile.firstName}}</p>
+		</ion-item>
+		<ion-item>
+			<h2>Last name</h2>
+			<p>{{profile.lastName}}</p>
+		</ion-item>
+		<ion-item>
+			<h2>Email</h2>
+			<p>{{profile.email}}</p>
+		</ion-item>
+
+		<div padding>
+			<button class="button button-full" (click)="logout()">Log out</button>
+		</div>
+	</ion-list>
+</ion-content>
