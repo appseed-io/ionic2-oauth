@@ -9,7 +9,7 @@ import { GoogleMapsModule } from '../pages/google-maps/google-maps.module';
 import { HomeModule } from '../pages/home/home.module';
 import { SlideBoxModule } from '../pages/slide-box/slide-box.module';
 import { WordpressModule } from '../pages/wordpress/wordpress.module';
-
+import { OAuthModule } from '../pages/oauth/oauth.module';
 
 @NgModule({
 	declarations: [
@@ -23,7 +23,8 @@ import { WordpressModule } from '../pages/wordpress/wordpress.module';
 		GoogleMapsModule,
 		HomeModule,
 		SlideBoxModule,
-		WordpressModule
+		WordpressModule,
+		OAuthModule
 	],
 	bootstrap: [IonicApp],
 	entryComponents: [

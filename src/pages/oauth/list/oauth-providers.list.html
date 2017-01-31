@@ -1,0 +1,22 @@
+<ion-header>
+	<ion-navbar>
+		 <button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>OAuth providers</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<h4 padding>Please login by using one of the following providers</h4>
+	<ion-list inset>
+		<ion-item (click)="login('facebook')">
+			<ion-icon name="logo-facebook" item-left></ion-icon>
+			Facebook
+		</ion-item>
+		<ion-item (click)="login('google')">
+			<ion-icon name="logo-google" item-left></ion-icon>
+			Google
+		</ion-item>
+	</ion-list>
+</ion-content>

@@ -10,6 +10,7 @@ import { WordpressListPage } from '../pages/wordpress/list/wordpress.list.page';
 import { SlideBoxPage } from '../pages/slide-box/slide-box.page';
 import { GoogleMapsPage } from '../pages/google-maps/google-maps.page';
 import { ComponentsListPage } from '../pages/components/list/components.list.page';
+import { OAuthProvidersListPage } from '../pages/oauth/list/oauth-providers.list.page';
 
 @Component({
 	templateUrl: 'app.html'
@@ -36,7 +37,8 @@ export class MyApp {
 			{ title: 'Wordpress', component: WordpressListPage, icon: 'logo-wordpress' },
 			{ title: 'Slides', component: SlideBoxPage, icon: 'swap' },
 			{ title: 'Google maps', component: GoogleMapsPage, icon: 'map' },
-			{ title: 'Components', component: ComponentsListPage, icon: 'grid' }
+			{ title: 'Components', component: ComponentsListPage, icon: 'grid' },
+			{ title: 'OAuth', component: OAuthProvidersListPage, icon: 'log-in' }
 		];
 
 		this.rootPage = HomePage;
