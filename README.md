@@ -1,5 +1,5 @@
 # Ionic2 OAuth app
-An Ionic 2 tutorial application demonstrating Facebook and Google login. This app is based on the Supermodular2 starter application .
+An Ionic 2 application based on the Supermodular2 starter. This project is the source code of a tutorial on How to Add Facebook and Google Login to your Ionic 2 App With Cordova OAuth, originally published at http://appseed.io/node/69.
 
 * Project's Home: https://github.com/skounis/supermodular2
 
