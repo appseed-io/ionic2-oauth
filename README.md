@@ -1,5 +1,5 @@
-# Supermodular2 Ionic
-A super modular Ionic 2.x starter application.
+# Ionic2 OAuth app
+An Ionic 2 tutorial application demonstrating Facebook and Google login. This app is based on the Supermodular2 starter application .
 
 * Project's Home: https://github.com/skounis/supermodular2
 
