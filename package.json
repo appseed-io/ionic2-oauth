@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "2.2.1",
     "@angular/platform-server": "2.2.1",
     "@ionic/storage": "1.1.7",
-    "angular2-google-maps": "0.16.0",
+    "@agm/core": "1.0.0-beta.0",
     "es6-promise": "3.0.2",
     "es6-shim": "^0.35.0",
     "ionic-angular": "2.0.0",
